@@ -38,7 +38,9 @@ include::../README.adoc[tags=content]
 
 == Implementation
 
-TODO: implement documentation...
+include::../_simple-starter/README.adoc[tags=content]
+include::../_parcel-starter/README.adoc[tags=content]
+include::../random-tachyons-button-styling/README.adoc[tags=content]
 
 == Links
 

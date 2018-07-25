@@ -31,7 +31,12 @@
             <fileset><directory>${project.basedir}/_parcel-starter/dist</directory></fileset>
             <fileset><directory>${project.basedir}/_parcel-starter/node_modules</directory></fileset>
 
+            <fileset><directory>${project.basedir}/random-tachyons-button-styling/.idea</directory></fileset>
+            <fileset><directory>${project.basedir}/random-tachyons-button-styling/dist</directory></fileset>
+            <fileset><directory>${project.basedir}/random-tachyons-button-styling/node_modules</directory></fileset>
+
             <fileset><directory>${project.basedir}/_simple-starter/.idea</directory></fileset>
+            <fileset><directory>${project.basedir}/_simple-starter/dist</directory></fileset>
             <fileset><directory>${project.basedir}/_simple-starter/node_modules</directory></fileset>
           </filesets>
         </configuration>

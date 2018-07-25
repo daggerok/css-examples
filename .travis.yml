@@ -1,5 +1,6 @@
 language: java
 jdk: oraclejdk8
+node_js: lts/*
 
 addons:
   apt:
@@ -9,8 +10,21 @@ addons:
     - curl
 
 install: true
+script:
+- export root=$(pwd)
+- >
+  for project in \
+    random-tachyons-button-styling \
+    _parcel-starter \
+    _simple-starter \
+  ; do
+    cd ${root}/${project}/
+    npm i
+    npm run predeploy
+  done
 
 before_deploy:
+- cd ${root}/
 - ./mvnw >/dev/null
 
 env:

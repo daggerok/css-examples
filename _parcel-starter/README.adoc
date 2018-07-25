@@ -1,4 +1,4 @@
-= parcel starter image:https://travis-ci.org/daggerok/css-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/css-examples"]
+== parcel starter image:https://travis-ci.org/daggerok/css-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/css-examples"]
 
 [source,bash]
 ----
