@@ -44,6 +44,7 @@ include::../random-tachyons-button-styling/README.adoc[tags=content]
 
 == Links
 
+- link:https://browsersync.io/docs/command-line[Browsersync Command Line Usage]
 ifdef::backend-html5[- link:./index.pdf[Documentation in PFD format]]
 - link:{github-url}[GitHub repo]
 - link:https://daggerok.github.io/{root-project-name}[GitHub pages]
