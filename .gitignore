@@ -11,3 +11,11 @@ out
 .DS_Store
 Thumbs.db
 /public/
+/target/
+
+node_modules/
+package-lock.json
+yarn.lock
+
+.cache/
+dist/

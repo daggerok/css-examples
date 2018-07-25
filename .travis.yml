@@ -1,7 +1,3 @@
-env:
-  global:
-  - TERM=dumb
-
 language: java
 jdk: oraclejdk8
 
@@ -15,7 +11,12 @@ addons:
 install: true
 
 before_deploy:
-- ./mvnw >/deb/null
+- ./mvnw >/dev/null
+
+env:
+  global:
+  - TERM=dumb
+  - secure: Y72diIQXJV+Esi5Hkex7s9G5DrQ7GQdTXEKjFqWR1UlxV1JHpJwWNO9BqTp5rX3GjhdAGBgvjRNDDGVI706f+ZyULARhZF+i9eZQLzQOF0e+SxByxKmVwzPan9bkt1tdUT0PeSG8R4do5hkOar8+zzdRqjJqnEV1cLbmd7vvmvqULkE6Npy8fD0NrVEuFShue/IUXYDZdfzvq0KI1yv7YmMP8KwoU+f9Mk7Y7b6EVSleO5aU5bgfOlVAMWMSSx4ucqgmFnnE4+AYPNqRuxxZ5QqrKfzeEWOskCpc/KtKJfmHDS2A5DEIt+zLc2HzWyu+gvHzScw/GV+hN3VnuHn5M1hLSWA4MDb/AqN34jbVjZIIYybqs4dhOU+5DJdSnlH+PGIaq3YbdmgoajIs8n4iS42BymdObCB/TkLIfpmMa9RZ+UQWCEfNqf49Y8GKMkF/xvrKX3WTLrJNA4GOm0xJ7bTvsQCWuP5m9ru4SOI2o4zLFFAQACiWzpPIRitQH5IsPZep5EieUc0ounv4kQ0NEJkTvMUuXc9Je9wkgPVbrIoKmqr290DTvPif3RFed5urk4lR9WHu8KfBuKR0Y8f38TUxdpe8oWtyrCREk/J8GOUneSKfKnZT7uEirf2j6bJs9gaUrIg0tFpTnQGogHOTQ9Ju3g/jYIRDaz1tIFl8hn0=
 
 deploy:
   provider: pages
