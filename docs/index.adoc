@@ -4,11 +4,6 @@ endif::backend-html5[]
 ifndef::backend-html5[]
 = {root-project-name} ({project-version})
 endif::backend-html5[]
-////
-image:https://travis-ci.org/daggerok/root-project-name.svg?branch=master["Build Status", link=github-url]
-image:https://gitlab.com/daggerok/root-project-name/badges/master/build.svg["Build Status", link=gitlab-url]
-image:https://img.shields.io/bitbucket/pipelines/daggerok/root-project-name.svg["Build Status", link=bitbucket-url]
-////
 Maksim Kostromin <daggerok@gmail.com>
 {docdatetime}
 :doctype: book
@@ -21,10 +16,10 @@ Maksim Kostromin <daggerok@gmail.com>
 :example-caption!:
 :source-highlighter: highlightjs
 
+////
 Travis CI status:
 image:https://travis-ci.org/daggerok/{root-project-name}.svg?branch=master["Build Status", link={github-url}]
 
-////
 GitLab CI status:
 image:https://gitlab.com/daggerok/{root-project-name}/badges/master/build.svg["Build Status", link={gitlab-url}]
 
@@ -40,7 +35,9 @@ include::../README.adoc[tags=content]
 
 include::../_simple-starter/README.adoc[]
 include::../_parcel-starter/README.adoc[]
+include::../_css-grid-starter/README.adoc[]
 include::../random-tachyons-button-styling/README.adoc[]
+include::../css-grid-display/README.adoc[]
 
 == Links
 

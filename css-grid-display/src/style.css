@@ -1,0 +1,6 @@
+.container {
+  display: grid;
+  grid-gap: 1px;
+  background-color: antiquewhite;
+  height: 100vh;
+}

@@ -14,11 +14,13 @@ script:
 - export root=$(pwd)
 - >
   for project in \
+    css-grid-display \
+    _css-grid-starter \
     random-tachyons-button-styling \
     _parcel-starter \
     _simple-starter \
   ; do
-    cd ${root}/${project}/
+    cd ${root}/${project}
     npm i
     npm run predeploy
   done
