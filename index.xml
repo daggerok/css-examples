@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>css-examples (0.0.1)</title>
-<date>2018-08-23 19:07:22 UTC</date>
+<date>2018-08-23 21:37:48 UTC</date>
 <author>
 <personname>
 <firstname>Maksim</firstname>
@@ -16,21 +16,11 @@
 <revhistory>
 <revision>
 <revnumber>0.0.1</revnumber>
-<date>2018-08-23 19:07:22 UTC</date>
+<date>2018-08-23 21:37:48 UTC</date>
 <authorinitials>MK</authorinitials>
 </revision>
 </revhistory>
 </info>
-<preface>
-<title></title>
-<simpara>Travis CI status:
-<inlinemediaobject>
-<imageobject>
-<imagedata fileref="https://travis-ci.org/daggerok/css-examples.svg?branch=master"/>
-</imageobject>
-<textobject><phrase>Build Status</phrase></textobject>
-</inlinemediaobject></simpara>
-</preface>
 <chapter xml:id="introduction">
 <title>Introduction</title>
 <simpara>Read <link xl:href="https://daggerok.github.io/css-examples">project reference documentation</link></simpara>
@@ -67,6 +57,15 @@
 </inlinemediaobject></title>
 <programlisting language="bash" linenumbering="unnumbered">npm run deploy</programlisting>
 </chapter>
+<chapter xml:id="css-grid-starter-inlinemediaobject-imageobject-imagedata-fileref-https-travis-ci-org-daggerok-css-examples-svg-branch-master-imageobject-textobject-phrase-build-status-phrase-textobject-inlinemediaobject">
+<title>css grid starter <inlinemediaobject>
+<imageobject>
+<imagedata fileref="https://travis-ci.org/daggerok/css-examples.svg?branch=master"/>
+</imageobject>
+<textobject><phrase>Build Status</phrase></textobject>
+</inlinemediaobject></title>
+<programlisting language="bash" linenumbering="unnumbered">npm run deploy</programlisting>
+</chapter>
 <chapter xml:id="random-tachyons-button-styling-inlinemediaobject-imageobject-imagedata-fileref-https-travis-ci-org-daggerok-css-examples-svg-branch-master-imageobject-textobject-phrase-build-status-phrase-textobject-inlinemediaobject">
 <title>random tachyons button styling <inlinemediaobject>
 <imageobject>
@@ -75,6 +74,17 @@
 <textobject><phrase>Build Status</phrase></textobject>
 </inlinemediaobject></title>
 <programlisting language="bash" linenumbering="unnumbered">npm run deploy</programlisting>
+</chapter>
+<chapter xml:id="css-grid-display-inlinemediaobject-imageobject-imagedata-fileref-https-travis-ci-org-daggerok-css-examples-svg-branch-master-imageobject-textobject-phrase-build-status-phrase-textobject-inlinemediaobject">
+<title>CSS Grid Display <inlinemediaobject>
+<imageobject>
+<imagedata fileref="https://travis-ci.org/daggerok/css-examples.svg?branch=master"/>
+</imageobject>
+<textobject><phrase>Build Status</phrase></textobject>
+</inlinemediaobject></title>
+<programlisting language="bash" linenumbering="unnumbered">npm start
+
+npm run deploy</programlisting>
 </chapter>
 <chapter xml:id="links">
 <title>Links</title>
