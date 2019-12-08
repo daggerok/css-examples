@@ -4,9 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "mkdirp ./build/forever",
+    "start": "forever start --workingDir ./build/forever ./node_modules/.bin/json-server --watch ./api/db.json --port 8080 --static ./src",
+    "stop": "forever stopall --killTree",
+    "test": "npm run stop"
   },
-  "keywords": [],
+  "keywords": [
+    "mkdirp",
+    "forever",
+    "json-server"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "forever": "1.0.0",
+    "json-server": "0.15.1",
+    "mkdirp": "0.5.1"
+  }
 }
