@@ -75,6 +75,7 @@ jobs:
     - stage: deploy
       name: GitHub pages deploy
       script: skip
+      jdk: openjdk8
       before_deploy: cd ${root} && ./mvnw
       env:
         global:
