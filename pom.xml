@@ -42,17 +42,17 @@
             <fileset><directory>${project.basedir}/css-grid-display/dist</directory></fileset>
             <fileset><directory>${project.basedir}/css-grid-display/node_modules</directory></fileset>
 
-            <fileset><directory>${project.basedir}/_parcel-starter/.idea</directory></fileset>
-            <fileset><directory>${project.basedir}/_parcel-starter/dist</directory></fileset>
-            <fileset><directory>${project.basedir}/_parcel-starter/node_modules</directory></fileset>
+            <fileset><directory>${project.basedir}/parcel-starter/.idea</directory></fileset>
+            <fileset><directory>${project.basedir}/parcel-starter/dist</directory></fileset>
+            <fileset><directory>${project.basedir}/parcel-starter/node_modules</directory></fileset>
 
-            <fileset><directory>${project.basedir}/_simple-starter/.idea</directory></fileset>
-            <fileset><directory>${project.basedir}/_simple-starter/dist</directory></fileset>
-            <fileset><directory>${project.basedir}/_simple-starter/node_modules</directory></fileset>
+            <fileset><directory>${project.basedir}/simple-starter/.idea</directory></fileset>
+            <fileset><directory>${project.basedir}/simple-starter/dist</directory></fileset>
+            <fileset><directory>${project.basedir}/simple-starter/node_modules</directory></fileset>
 
-            <fileset><directory>${project.basedir}/_css-grid-starter/.idea</directory></fileset>
-            <fileset><directory>${project.basedir}/_css-grid-starter/dist</directory></fileset>
-            <fileset><directory>${project.basedir}/_css-grid-starter/node_modules</directory></fileset>
+            <fileset><directory>${project.basedir}/css-grid-starter/.idea</directory></fileset>
+            <fileset><directory>${project.basedir}/css-grid-starter/dist</directory></fileset>
+            <fileset><directory>${project.basedir}/css-grid-starter/node_modules</directory></fileset>
           </filesets>
         </configuration>
       </plugin>

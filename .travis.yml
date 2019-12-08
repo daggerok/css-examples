@@ -50,9 +50,9 @@ jobs:
         - npm i
         - npm run predeploy
     - stage: test
-      name: _css-grid-starter
+      name: css-grid-starter
       script:
-        - cd $TRAVIS_BUILD_DIR/_css-grid-starter
+        - cd $TRAVIS_BUILD_DIR/css-grid-starter
         - npm i
         - npm run predeploy
     - stage: test
@@ -62,15 +62,15 @@ jobs:
         - npm i
         - npm run predeploy
     - stage: test
-      name: _parcel-starter
+      name: parcel-starter
       script:
-        - cd $TRAVIS_BUILD_DIR/_parcel-starter
+        - cd $TRAVIS_BUILD_DIR/parcel-starter
         - npm i
         - npm run predeploy
     - stage: test
-      name: _simple-starter
+      name: simple-starter
       script:
-        - cd $TRAVIS_BUILD_DIR/_simple-starter
+        - cd $TRAVIS_BUILD_DIR/simple-starter
         - npm i
         - npm run predeploy
     - stage: deploy

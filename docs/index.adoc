@@ -33,9 +33,9 @@ include::../README.adoc[tags=content]
 
 == Implementation
 
-include::../_simple-starter/README.adoc[]
-include::../_parcel-starter/README.adoc[]
-include::../_css-grid-starter/README.adoc[]
+include::../simple-starter/README.adoc[]
+include::../parcel-starter/README.adoc[]
+include::../css-grid-starter/README.adoc[]
 include::../random-tachyons-button-styling/README.adoc[]
 include::../css-grid-display/README.adoc[]
 
