@@ -6,7 +6,7 @@ git:
 language: node
 node_js: lts/*
 python: 3.7
-service: docker
+#service: docker
 os: linux
 addons:
   apt:
@@ -15,7 +15,7 @@ addons:
       - curl
       - sudo
       - lsof
-      - docker-ce
+      #- docker-ce
       - python3-pip
 install: true
 before_install:
@@ -35,41 +35,41 @@ jobs:
     - stage: test
       name: json-server-forever
       before_script:
-        - cd ${root}/json-server-forever && npm i
-        - cd ${root}/json-server-forever && npm start
+        - cd $TRAVIS_BUILD_DIR/json-server-forever && npm i
+        - cd $TRAVIS_BUILD_DIR/json-server-forever && npm start
       script:
         - http :8080/
         - http :8080/messages
         - http :8080/db.json
-      after_script: cd ${root}/json-server-forever && npm stop
+      after_script: cd $TRAVIS_BUILD_DIR/json-server-forever && npm stop
     - stage: test
       name: css-grid-display
       script:
-        - cd ${root}/css-grid-display
+        - cd $TRAVIS_BUILD_DIR/css-grid-display
         - npm i
         - npm run predeploy
     - stage: test
       name: _css-grid-starter
       script:
-        - cd ${root}/_css-grid-starter
+        - cd $TRAVIS_BUILD_DIR/_css-grid-starter
         - npm i
         - npm run predeploy
     - stage: test
       name: random-tachyons-button-styling
       script:
-        - cd ${root}/random-tachyons-button-styling
+        - cd $TRAVIS_BUILD_DIR/random-tachyons-button-styling
         - npm i
         - npm run predeploy
     - stage: test
       name: _parcel-starter
       script:
-        - cd ${root}/_parcel-starter
+        - cd $TRAVIS_BUILD_DIR/_parcel-starter
         - npm i
         - npm run predeploy
     - stage: test
       name: _simple-starter
       script:
-        - cd ${root}/_simple-starter
+        - cd $TRAVIS_BUILD_DIR/_simple-starter
         - npm i
         - npm run predeploy
     - stage: deploy
@@ -83,11 +83,11 @@ jobs:
       deploy: &pages
         provider: pages
         skip-cleanup: true
+        keep-history: true
         target_branch: gh-pages
         # travis encrypt GITHUB_TOKEN=<your github repo token> --add
         github-token: "$GITHUB_TOKEN"
-        local-dir: target/generated-docs
-        keep-history: true
+        local-dir: $TRAVIS_BUILD_DIR/target/generated-docs
         on:
           branch: master
 cache:
