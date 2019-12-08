@@ -77,7 +77,7 @@ jobs:
       name: GitHub pages deploy
       script: skip
       jdk: openjdk8
-      before_deploy: cd ${root} && ./mvnw
+      before_deploy: cd $TRAVIS_BUILD_DIR && ./mvnw
       env:
         global:
         - TERM=dumb
