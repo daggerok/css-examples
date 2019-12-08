@@ -13,3 +13,4 @@ Thumbs.db
 /public/
 /target/
 node_modules/
+package-lock.json
