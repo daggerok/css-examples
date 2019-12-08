@@ -1,50 +1,65 @@
+os: linux
+arch: amd64
 language: java
-jdk: oraclejdk8
+jdk: openjdk8
 node_js: lts/*
-
 addons:
   apt:
     update: true
     packages:
     - bash
     - curl
-
 install: true
-script:
-- export root=$(pwd)
-- >
-  for project in \
-    css-grid-display \
-    _css-grid-starter \
-    random-tachyons-button-styling \
-    _parcel-starter \
-    _simple-starter \
-  ; do
-    cd ${root}/${project}
-    npm i
-    npm run predeploy
-  done
-
-before_deploy:
-- cd ${root}/
-- ./mvnw >/dev/null
-
-env:
-  global:
-  - TERM=dumb
-  - secure: Y72diIQXJV+Esi5Hkex7s9G5DrQ7GQdTXEKjFqWR1UlxV1JHpJwWNO9BqTp5rX3GjhdAGBgvjRNDDGVI706f+ZyULARhZF+i9eZQLzQOF0e+SxByxKmVwzPan9bkt1tdUT0PeSG8R4do5hkOar8+zzdRqjJqnEV1cLbmd7vvmvqULkE6Npy8fD0NrVEuFShue/IUXYDZdfzvq0KI1yv7YmMP8KwoU+f9Mk7Y7b6EVSleO5aU5bgfOlVAMWMSSx4ucqgmFnnE4+AYPNqRuxxZ5QqrKfzeEWOskCpc/KtKJfmHDS2A5DEIt+zLc2HzWyu+gvHzScw/GV+hN3VnuHn5M1hLSWA4MDb/AqN34jbVjZIIYybqs4dhOU+5DJdSnlH+PGIaq3YbdmgoajIs8n4iS42BymdObCB/TkLIfpmMa9RZ+UQWCEfNqf49Y8GKMkF/xvrKX3WTLrJNA4GOm0xJ7bTvsQCWuP5m9ru4SOI2o4zLFFAQACiWzpPIRitQH5IsPZep5EieUc0ounv4kQ0NEJkTvMUuXc9Je9wkgPVbrIoKmqr290DTvPif3RFed5urk4lR9WHu8KfBuKR0Y8f38TUxdpe8oWtyrCREk/J8GOUneSKfKnZT7uEirf2j6bJs9gaUrIg0tFpTnQGogHOTQ9Ju3g/jYIRDaz1tIFl8hn0=
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  # travis encrypt GITHUB_TOKEN=<your github repo token> --add
-  github-token: "$GITHUB_TOKEN"
-  keep-history: true
-  on:
-    branch: master
-  local-dir: target/generated-docs
-  target_branch: gh-pages
-
+jobs:
+  include:
+    - stage: test
+      name: css-grid-display
+      script:
+        - cd ${root}/css-grid-display
+        - npm i
+        - npm run predeploy
+    - stage: test
+      name: _css-grid-starter
+      script:
+        - cd ${root}/_css-grid-starter
+        - npm i
+        - npm run predeploy
+    - stage: test
+      name: random-tachyons-button-styling
+      script:
+        - cd ${root}/random-tachyons-button-styling
+        - npm i
+        - npm run predeploy
+    - stage: test
+      name: _parcel-starter
+      script:
+        - cd ${root}/_parcel-starter
+        - npm i
+        - npm run predeploy
+    - stage: test
+      name: _simple-starter
+      script:
+        - cd ${root}/_simple-starter
+        - npm i
+        - npm run predeploy
+    - stage: deploy
+      name: GitHub pages deploy
+      script: skip
+      before_deploy: cd ${root} && ./mvnw
+      env:
+        global:
+        - TERM=dumb
+        - secure: Y72diIQXJV+Esi5Hkex7s9G5DrQ7GQdTXEKjFqWR1UlxV1JHpJwWNO9BqTp5rX3GjhdAGBgvjRNDDGVI706f+ZyULARhZF+i9eZQLzQOF0e+SxByxKmVwzPan9bkt1tdUT0PeSG8R4do5hkOar8+zzdRqjJqnEV1cLbmd7vvmvqULkE6Npy8fD0NrVEuFShue/IUXYDZdfzvq0KI1yv7YmMP8KwoU+f9Mk7Y7b6EVSleO5aU5bgfOlVAMWMSSx4ucqgmFnnE4+AYPNqRuxxZ5QqrKfzeEWOskCpc/KtKJfmHDS2A5DEIt+zLc2HzWyu+gvHzScw/GV+hN3VnuHn5M1hLSWA4MDb/AqN34jbVjZIIYybqs4dhOU+5DJdSnlH+PGIaq3YbdmgoajIs8n4iS42BymdObCB/TkLIfpmMa9RZ+UQWCEfNqf49Y8GKMkF/xvrKX3WTLrJNA4GOm0xJ7bTvsQCWuP5m9ru4SOI2o4zLFFAQACiWzpPIRitQH5IsPZep5EieUc0ounv4kQ0NEJkTvMUuXc9Je9wkgPVbrIoKmqr290DTvPif3RFed5urk4lR9WHu8KfBuKR0Y8f38TUxdpe8oWtyrCREk/J8GOUneSKfKnZT7uEirf2j6bJs9gaUrIg0tFpTnQGogHOTQ9Ju3g/jYIRDaz1tIFl8hn0=
+      deploy: &pages
+        provider: pages
+        skip-cleanup: true
+        target_branch: gh-pages
+        # travis encrypt GITHUB_TOKEN=<your github repo token> --add
+        github-token: "$GITHUB_TOKEN"
+        local-dir: target/generated-docs
+        keep-history: true
+        on:
+          branch: master
 cache:
   directories:
   - $HOME/.m2
