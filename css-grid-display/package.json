@@ -16,7 +16,7 @@
     "predeploy:build": "parcel build --no-cache --public-url '/css-examples' ./src/index.html",
     "predeploy:add-base-href": "bash ./bin/gh-pages-base-href.bash ./dist/index.html css-examples add",
     "predeploy:gh-pages-404": "ncp ./dist/index.html ./dist/404.html",
-    "predeploy:nojekyll": "ncp ./dist/.nojekyll ./dist/.nojekyll",
+    "predeploy:nojekyll": "ncp ./src/.nojekyll ./dist/.nojekyll",
     "deploy": "gh-pages -e ./ -d ./dist -s '{*.*,.*,*,**}' --branch gh-pages --dotfiles=true -m \"Github Pages $(date +%Y-%m-%d) deployment\""
   },
   "keywords": [],
