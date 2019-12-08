@@ -37,6 +37,7 @@ jobs:
       before_script:
         - cd $TRAVIS_BUILD_DIR/json-server-forever && npm i
         - cd $TRAVIS_BUILD_DIR/json-server-forever && npm start
+        - wait_for 8080
       script:
         - http :8080/
         - http :8080/messages
