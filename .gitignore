@@ -14,3 +14,7 @@ Thumbs.db
 /target/
 node_modules/
 package-lock.json
+/dist/
+**/dist/**
+/.cache/
+**/.cache/**

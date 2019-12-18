@@ -4,7 +4,31 @@
 
 Read link:https://daggerok.github.io/css-examples[project reference documentation]
 
-others:
+_"must have" topics_
+
+- css selectors
+- css properties
+- css values
+- css units: `css-property: valu e{unit}`
+  . absolute: mm, cm, px, in, pt, pc
+  . relative: %, em, rm, vw, vh, vmin, vmax
+- css multiple selectors
+- css functions:
+  . rgba: `background-color: rgba(0,0,0,0.4)`
+  . calc: `margin: calc(2em * 5em)`
+  . ...
+- css animations
+  . animation
+  . keyframes
+  . `transitions` between 2 css values
+- css media queries
+  . `@media only screen and (min-width: 650px) { /* scoped css rules... */ }`
+- css selectors weight
+  . by element selector == 1
+  . by class name selector == 100
+  . by id selector == 1000
+
+_other repositories_
 
 - link:https://github.com/daggerok/tachyons-example[GitHub: daggerok/tachyons-example]
 - link:https://github.com/daggerok/css-grid-layout-example[GitHub: daggerok/css-grid-layout-example]

@@ -33,6 +33,19 @@ before_install:
 jobs:
   include:
     - stage: test
+      name: frontender
+      env:
+        global:
+          - MY_PROJECT_NAME=frontender
+      before_script:
+        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
+        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
+        - wait_for 1234
+      script:
+        - http :1234
+        - http :1234/part1/index.html
+      after_script: cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm stop
+    - stage: test
       name: json-server-forever
       before_script:
         - cd $TRAVIS_BUILD_DIR/json-server-forever && npm i

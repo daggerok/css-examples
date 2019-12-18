@@ -1,0 +1,28 @@
+body,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    border: 3px solid grey;
+    background-color: grey;
+    text-align: center;
+}
+
+li:hover {
+    border: 3px solid white;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    min-width: 100%;
+    color: white;
+}
+
+a:hover {
+    color: grey;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "frontender",
+  "version": "1.0.0",
+  "description": "see: https://www.youtube.com/watch?v=8gNrZ4lAnAw&list=PL0lNJEnwfVVN2weA7ogzp6GlJvQlXnrSj&index=3",
+  "main": "src/index.html",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "dev": "parcel serve src/index.html",
+    "start": "forever start --minUptime 1000 --spinSleepTime 1000 ./node_modules/.bin/parcel serve src/index.html",
+    "stop": "forever stopall --killTree",
+    "test": "npm run stop"
+  },
+  "keywords": [
+    "css",
+    "parcel",
+    "parcel-bundler"
+  ],
+  "author": "daggerok",
+  "license": "ISC",
+  "devDependencies": {
+    "forever": "1.0.0",
+    "parcel-bundler": "1.12.4"
+  }
+}
