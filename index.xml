@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>css-examples (0.0.2)</title>
-<date>2019-12-18 19:03:56 UTC</date>
+<date>2019-12-18 19:18:06 UTC</date>
 <author>
 <personname>
 <firstname>Maksim</firstname>
@@ -16,7 +16,7 @@
 <revhistory>
 <revision>
 <revnumber>0.0.2</revnumber>
-<date>2019-12-18 19:03:56 UTC</date>
+<date>2019-12-18 19:18:06 UTC</date>
 <authorinitials>MK</authorinitials>
 </revision>
 </revhistory>
@@ -165,6 +165,9 @@ npm run deploy</programlisting>
 <chapter xml:id="links">
 <title>Links</title>
 <itemizedlist>
+<listitem>
+<simpara><link xl:href="https://www.youtube.com/watch?v=_Hp_dI0DzY4">YouTube: The 2019 UI Design Crash Course for Beginners</link></simpara>
+</listitem>
 <listitem>
 <simpara><link xl:href="https://www.youtube.com/watch?v=8gNrZ4lAnAw&amp;list=PL0lNJEnwfVVN2weA7ogzp6GlJvQlXnrSj&amp;index=3">YouTube: The 2019 Frontend Developer Crash Course - HTML &amp; CSS Tutorial for Beginners</link></simpara>
 </listitem>
