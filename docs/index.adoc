@@ -41,6 +41,7 @@ include::../css-grid-display/README.adoc[]
 
 == Links
 
+- link:https://www.youtube.com/watch?v=_Hp_dI0DzY4[YouTube: The 2019 UI Design Crash Course for Beginners]
 - link:https://www.youtube.com/watch?v=8gNrZ4lAnAw&list=PL0lNJEnwfVVN2weA7ogzp6GlJvQlXnrSj&index=3[YouTube: The 2019 Frontend Developer Crash Course - HTML & CSS Tutorial for Beginners]
 - link:https://browsersync.io/docs/command-line[Browsersync Command Line Usage]
 ifdef::backend-html5[- link:./index.pdf[Documentation in PFD format]]
