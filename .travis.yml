@@ -3,15 +3,17 @@ notifications:
 git:
   quiet: true
   depth: false
-language: node
+language: node_js
 node_js: lts/*
 python: 3.7
 #service: docker
 os: linux
+arch: amd64
 addons:
   apt:
     update: true
     packages:
+      #- jq
       - curl
       - sudo
       - lsof
@@ -35,8 +37,7 @@ jobs:
     - stage: test
       name: frontender
       env:
-        global:
-          - MY_PROJECT_NAME=frontender
+        - MY_PROJECT_NAME=frontender
       before_script:
         - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
         - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
