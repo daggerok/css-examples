@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>css-examples (0.0.2)</title>
-<date>2019-12-18 19:20:43 UTC</date>
+<date>2019-12-18 19:24:52 UTC</date>
 <author>
 <personname>
 <firstname>Maksim</firstname>
@@ -16,7 +16,7 @@
 <revhistory>
 <revision>
 <revnumber>0.0.2</revnumber>
-<date>2019-12-18 19:20:43 UTC</date>
+<date>2019-12-18 19:24:52 UTC</date>
 <authorinitials>MK</authorinitials>
 </revision>
 </revhistory>
@@ -24,7 +24,28 @@
 <chapter xml:id="introduction">
 <title>Introduction</title>
 <simpara>Read <link xl:href="https://daggerok.github.io/css-examples">project reference documentation</link></simpara>
-<simpara><emphasis>"must have" topics</emphasis></simpara>
+<simpara><emphasis>ui / ux "must have" topics</emphasis></simpara>
+<itemizedlist>
+<listitem>
+<simpara>color &amp; contrast</simpara>
+</listitem>
+<listitem>
+<simpara>white space</simpara>
+</listitem>
+<listitem>
+<simpara>visual hierarchy</simpara>
+</listitem>
+<listitem>
+<simpara>complexity cs simplicity</simpara>
+</listitem>
+<listitem>
+<simpara>consistency</simpara>
+</listitem>
+<listitem>
+<simpara>scale</simpara>
+</listitem>
+</itemizedlist>
+<simpara><emphasis>css "must have" topics</emphasis></simpara>
 <itemizedlist>
 <listitem>
 <simpara>css selectors</simpara>
