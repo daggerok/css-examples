@@ -7,7 +7,7 @@ npm run dev
 
 open http://127.0.0.1:1234/
 
-## ui ux `must have` topics
+## ui / ux `must have` topics
 
 * color & contrast
 * white space
