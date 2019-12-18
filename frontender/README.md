@@ -7,7 +7,16 @@ npm run dev
 
 open http://127.0.0.1:1234/
 
-## `must have` topics
+## ui ux `must have` topics
+
+* color & contrast
+* white space
+* visual hierarchy
+* complexity cs simplicity
+* consistency
+* scale
+
+## css `must have` topics
 
 * css selectors
 * css properties
