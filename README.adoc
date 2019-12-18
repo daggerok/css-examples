@@ -4,7 +4,16 @@
 
 Read link:https://daggerok.github.io/css-examples[project reference documentation]
 
-_"must have" topics_
+_ui / ux "must have" topics_
+
+- color & contrast
+- white space
+- visual hierarchy
+- complexity cs simplicity
+- consistency
+- scale
+
+_css "must have" topics_
 
 - css selectors
 - css properties
