@@ -6,8 +6,8 @@ ul {
 }
 
 li {
-    border: 3px solid grey;
-    background-color: grey;
+    border: 3px solid #6b6b6b;
+    background-color: #6b6b6b;
     text-align: center;
 }
 
@@ -20,9 +20,9 @@ a {
     text-decoration: none;
     display: inline-block;
     min-width: 100%;
-    color: white;
+    color: lightgray;
 }
 
 a:hover {
-    color: grey;
+    color: #6b6b6b;
 }
