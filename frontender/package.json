@@ -4,12 +4,17 @@
   "description": "see: https://www.youtube.com/watch?v=8gNrZ4lAnAw&list=PL0lNJEnwfVVN2weA7ogzp6GlJvQlXnrSj&index=3",
   "main": "src/index.html",
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "parcel build --no-cache src/index.html",
     "dev": "parcel serve src/index.html",
     "start": "forever start --minUptime 1000 --spinSleepTime 1000 ./node_modules/.bin/parcel serve src/index.html",
     "stop": "forever stopall --killTree",
-    "test": "npm run stop"
+    "predeploy": "npm-run-all predeploy:*",
+    "predeploy:rimraf": "rimraf dist",
+    "predeploy:parcel": "npm run build -- --public-url='/css-examples/'",
+    "predeploy:ncp": "ncp ./dist/index.html ./dist/404.html",
+    "deploy": "gh-pages -e ./ -d ./dist -s '{*.*,.*,*,**}' --branch gh-pages --dotfiles=true -m \"Github Pages $(date +%Y-%m-%d) deployment\""
   },
+  "homepage": "https://daggerok.github.io/css-examples/",
   "keywords": [
     "css",
     "parcel",
@@ -19,6 +24,11 @@
   "license": "ISC",
   "devDependencies": {
     "forever": "1.0.0",
-    "parcel-bundler": "1.12.4"
+    "gh-pages": "2.1.1",
+    "ncp": "2.0.0",
+    "npm-run-all": "4.1.5",
+    "parcel-bundler": "1.12.4",
+    "rimraf": "3.0.0",
+    "webfontloader": "1.6.28"
   }
 }

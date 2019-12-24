@@ -47,3 +47,5 @@ open http://127.0.0.1:1234/
 * [Origami studio](https://origami.design/)
 * [YouTube: The 2019 UI Design Crash Course for Beginners](https://www.youtube.com/watch?v=_Hp_dI0DzY4)
 * [YouTube: The 2019 Frontend Developer Crash Course - HTML & CSS Tutorial for Beginners](https://www.youtube.com/watch?v=8gNrZ4lAnAw&list=PL0lNJEnwfVVN2weA7ogzp6GlJvQlXnrSj&index=3)
+* [Parcel WebFont](https://forums.meteor.com/t/solved-roboto-font-npm-package-doesnt-work/47724/2)
+* [CSS uppercase text](https://love2dev.com/blog/css-text-transform/)
