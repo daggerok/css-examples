@@ -42,6 +42,7 @@ open http://127.0.0.1:1234/
 
 ## resources
 
+* [css clippy](https://bennettfeely.com/clippy/)
 * [Material icons guide](http://google.github.io/material-design-icons/)
 * [Material icons](https://material.io/resources/icons/)
 * [Origami studio](https://origami.design/)
