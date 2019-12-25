@@ -1,0 +1,40 @@
+body,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.header {
+    position: absolute;
+}
+
+.row {
+    width: 100%;
+}
+
+.col2 {
+    max-width: 20%;
+}
+
+.col8 {
+    max-width: 80%;
+}
+
+.logo {
+    background: url("./g30.png");
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
