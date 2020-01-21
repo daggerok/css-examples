@@ -6,19 +6,17 @@ git:
 language: node_js
 node_js: lts/*
 python: 3.7
-#service: docker
 os: linux
 arch: amd64
 addons:
   apt:
     update: true
     packages:
-      #- jq
+      - jq
       - curl
       - sudo
       - lsof
-      #- docker-ce
-      - python3-pip
+      - httpie
 install: true
 before_install:
   - export DISPLAY=:99.0
@@ -29,9 +27,6 @@ before_install:
     fi
     source ${HOME}/.local/daggerok/bash-functions/master/main.bash ;
   - stop_any 80 3000 5000 8080 5432
-  - export PATH=$HOME/.local/bin:$PATH
-  - pip3 install --user --upgrade pip setuptools
-  - pip install --user --upgrade httpie
 jobs:
   include:
     - stage: test
@@ -54,8 +49,8 @@ jobs:
         - wait_for 8080
       script:
         - http :8080/
-        - http :8080/messages
-        - http :8080/db.json
+        - http :8080/messages | jq '.'
+        - http :8080/db.json  | jq '.'
       after_script: cd $TRAVIS_BUILD_DIR/json-server-forever && npm stop
     - stage: test
       name: css-grid-display

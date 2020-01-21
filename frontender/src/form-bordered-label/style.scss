@@ -1,0 +1,17 @@
+$fonts: (
+        primary: Roboto sans-serif
+);
+
+$colors: (
+        primary: #3338ff
+);
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: map-get($fonts, primary);
+}
