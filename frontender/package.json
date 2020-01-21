@@ -7,7 +7,7 @@
     "build": "parcel build --no-cache src/index.html",
     "dev": "parcel serve src/index.html",
     "start": "forever start --minUptime 1000 --spinSleepTime 1000 ./node_modules/.bin/parcel serve src/index.html",
-    "logs": "forever logs 0",
+    "logs": "forever --watch logs -f 0",
     "stop": "forever stopall --killTree",
     "predeploy": "npm-run-all predeploy:*",
     "predeploy:rimraf": "rimraf dist",
