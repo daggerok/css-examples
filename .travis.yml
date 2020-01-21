@@ -50,7 +50,8 @@ jobs:
       script:
         - http :8080/
         - http :8080/messages | jq '.'
-        - http :8080/db.json  | jq '.'
+        - http :8080/messages
+        - http :8080/db.json
       after_script: cd $TRAVIS_BUILD_DIR/json-server-forever && npm stop
     - stage: test
       name: css-grid-display
