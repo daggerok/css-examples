@@ -31,7 +31,11 @@ main {
     width: 65.4%;
     background-color: #0086C6;
     margin: 30px 0;
+    /*  to place tex in center you can use text-align,
+        but to place whole block in center you can use
+        margin auto for left and right */
     margin-left: auto;
+    margin-right: auto;
 }
 
 main h3 {
