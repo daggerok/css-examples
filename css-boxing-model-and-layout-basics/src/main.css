@@ -1,0 +1,49 @@
+body,
+html,
+h3 {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: white;
+    color: white;
+    padding: 90px 74px 30px 48px;
+}
+
+#app {
+    background-color: #CACACA;
+}
+
+header {
+    background-color: #78909C;
+}
+
+header h3 {
+    padding: 55px 0 35px;
+}
+
+main {
+    width: 65.4%;
+    background-color: #0086C6;
+    margin: 30px 0;
+}
+
+main h3 {
+    margin: -5px;
+    padding: 155px 0;
+    border: black solid 11px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #11405C;
+}
+
+footer h3 {
+    padding: 25px 0;
+}
