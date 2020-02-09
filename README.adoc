@@ -1,4 +1,4 @@
-= css-examples image:https://travis-ci.org/daggerok/css-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/css-examples"]
+= css-examples image:https://travis-ci.org/daggerok/css-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/css-examples"] image:https://github.com/daggerok/css-examples/workflows/CI/badge.svg["CI", link="https://github.com/daggerok/css-examples/actions"]
 
 image::ui-principles.png[]
 
