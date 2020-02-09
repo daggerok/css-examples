@@ -30,6 +30,18 @@ before_install:
 jobs:
   include:
     - stage: test
+      name: css-correct-way-to-inline-blocks-with-flex
+      env:
+        - MY_PROJECT_NAME=css-correct-way-to-inline-blocks-with-flex
+      before_script:
+        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
+        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
+        - wait_for 1234
+      script:
+        - http :1234
+        - http :1234/
+      after_script: cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm stop
+    - stage: test
       name: css-boxing-model-and-layout-basics
       env:
         - MY_PROJECT_NAME=css-boxing-model-and-layout-basics
@@ -117,10 +129,16 @@ jobs:
       #before_deploy:
       #  - cd $TRAVIS_BUILD_DIR/frontender && npm i
       #  - cd $TRAVIS_BUILD_DIR/frontender && npm run predeploy
-        local-dir: $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics/dist
+
+      #  local-dir: $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics/dist
+      #before_deploy:
+      #  - cd $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics && npm i
+      #  - cd $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics && npm run gh
+
+        local-dir: $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex/dist
       before_deploy:
-        - cd $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics && npm i
-        - cd $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics && npm run gh
+        - cd $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex && npm i
+        - cd $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex && npm run gh
 cache:
   directories:
   - ~/.m2
