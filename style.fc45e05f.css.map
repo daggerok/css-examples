@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,OAEI,QAAS,CACT,SACJ,CAEA,KACI,6BACJ","file":"style.fc45e05f.css","sourceRoot":"../src","sourcesContent":["body,\np {\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    font-family: Roboto, sans-serif;\n}\n"]}
