@@ -4,4 +4,4 @@ var t;!function(){function n(t,n,i){return t.call.apply(t.bind,arguments)}functi
 },{}],"QdeU":[function(require,module,exports) {
 "use strict";var e=t(require("webfontloader"));function t(e){return e&&e.__esModule?e:{default:e}}function n(e){return document.querySelector(e)}function r(){return n("aside nav ul")}function u(){return n("img")}function o(e){r().classList.toggle("active"),e.preventDefault()}function i(){u().addEventListener("click",o,!1)}e.default.load({google:{families:["Montserrat&display=swap"]}}),document.addEventListener("DOMContentLoaded",i,!1);
 },{"webfontloader":"FryP"}]},{},["QdeU"], null)
-//# sourceMappingURL=/css-examples/app.078f7b21.js.map
+//# sourceMappingURL=/css-examples/app.6a7fdc40.js.map
