@@ -146,10 +146,15 @@ jobs:
       #  - cd $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics && npm i
       #  - cd $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics && npm run gh
       #
-        local-dir: $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex/dist
+      #  local-dir: $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex/dist
+      #before_deploy:
+      #  - cd $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex && npm i
+      #  - cd $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex && npm run gh
+      #
+        local-dir: $TRAVIS_BUILD_DIR/css-gradient-based-app-step-1/dist
       before_deploy:
-        - cd $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex && npm i
-        - cd $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex && npm run gh
+        - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-1 && npm i
+        - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-1 && npm run gh
 cache:
   directories:
   - ~/.m2

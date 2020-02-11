@@ -1,0 +1,28 @@
+{
+  "name": "nestjs-example",
+  "version": "0.0.1",
+  "description": "Learn css box model and simple layout",
+  "author": "daggerok",
+  "license": "MIT",
+  "scripts": {
+    "gh": "npm run build -- --public-url='/css-examples/'",
+    "build": "parcel build src/index.html",
+    "postbuild:not-fully-working": "parcel build 'public/**/*'",
+    "postbuild": "ncp ./public ./dist --filter '**/*.*'",
+    "dev": "parcel src/index.html",
+    "start": "pm2 start 'npm run dev' --name app",
+    "restart": "pm2 restart app",
+    "stop": "pm2 kill",
+    "logs": "pm2 logs"
+  },
+  "keywords": [
+    "pm2",
+    "parcel"
+  ],
+  "devDependencies": {
+    "ncp": "2.0.0",
+    "parcel-bundler": "1.12.4",
+    "pm2": "4.2.3",
+    "webfontloader": "1.6.28"
+  }
+}

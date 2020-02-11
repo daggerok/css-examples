@@ -1,0 +1,55 @@
+/* defaults: don't touch it */
+
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); */
+
+body,
+html {
+    /* margin: 0; <- do not do that! */
+    padding: 0;
+    border-width: 0;
+    height: calc(100% - 2em);
+    margin: 0;
+    /*font-size: 1.1em;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* custom: start here */
+
+body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f24dc6+0,207ce5+100 */
+    background: #d74aac; /* Old browsers */
+    background: -moz-linear-gradient(left, #d74aac 0%, #207ce5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #d74aac 0%,#207ce5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #d74aac 0%,#207ce5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f24dc6', endColorstr='#207ce5',GradientType=1 ); /* IE6-9 */
+
+    /* fixed, no repeat bg: */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* menu */
+
+aside {
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto 2em;
+    padding: 2em;
+}
+
+img {
+    width: 2.3em;
+    cursor: pointer;
+}
+
+/* name */
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: 1.3em;
+    font-weight: bolder;
+}

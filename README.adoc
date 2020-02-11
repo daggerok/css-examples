@@ -4,7 +4,10 @@ image::ui-principles.png[]
 
 //tag::content[]
 
-Read link:https://daggerok.github.io/css-examples[project reference documentation]
+reference:
+
+- Read link:https://daggerok.github.io/css-examples[project reference documentation]
+- link:https://github.com/parcel-bundler/parcel/issues/1080#issuecomment-584745016[Parcel Bundler copy static resources assets files]
 
 _ui / ux "must have" topics_
 
