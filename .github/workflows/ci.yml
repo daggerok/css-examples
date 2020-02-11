@@ -8,7 +8,7 @@ jobs:
         nodejs-version: [12]
         python-version: [3.8]
     runs-on: ${{ matrix.os }}
-    name: css-gradient ${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }}
+    name: css-gradient (${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }})
     steps:
       - name: Set up NodeJS ${{ matrix.nodejs-version }}
         uses: actions/setup-node@v1
@@ -40,7 +40,7 @@ jobs:
         nodejs-version: [12]
         python-version: [3.8]
     runs-on: ${{ matrix.os }}
-    name: css-correct-way-to-inline-blocks-with-flex ${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }}
+    name: css-correct-way-to-inline-blocks-with-flex (${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }})
     steps:
       - name: Set up NodeJS ${{ matrix.nodejs-version }}
         uses: actions/setup-node@v1
@@ -77,7 +77,7 @@ jobs:
         nodejs-version: [12]
         python-version: [3.8]
     runs-on: ${{ matrix.os }}
-    name: css-boxing-model-and-layout-basics ${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }}
+    name: css-boxing-model-and-layout-basics (${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }})
     steps:
       - name: Set up NodeJS ${{ matrix.nodejs-version }}
         uses: actions/setup-node@v1
