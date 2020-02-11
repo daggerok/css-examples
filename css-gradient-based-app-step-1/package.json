@@ -9,7 +9,7 @@
     "build": "parcel build src/index.html",
     "postbuild:not-fully-working": "parcel build 'public/**/*'",
     "postbuild": "ncp ./public ./dist --filter '**/*.*'",
-    "dev": "parcel src/index.html",
+    "dev": "parcel src/index.html --no-cache",
     "start": "pm2 start 'npm run dev' --name app",
     "restart": "pm2 restart app",
     "stop": "pm2 kill",

@@ -53,3 +53,43 @@ figcaption {
     font-size: 1.3em;
     font-weight: bolder;
 }
+
+/* menu */
+
+nav {
+    background: #fff;
+}
+
+ul {
+    display: none;
+}
+
+ul.active {
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    top: 0;
+}
+
+ul {
+    margin-top: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul li a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    display: block;
+    padding: 1.5em 3em;
+    background-color: rgba(255, 255, 255, .35);
+}
+
+ul li a:hover {
+    background-color: rgba(232, 232, 232, 0.35);
+}
