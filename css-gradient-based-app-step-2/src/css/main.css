@@ -1,0 +1,237 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+body {
+    padding: 0;
+    border-width: 0;
+    /*height: 100vh;*/
+    height: calc(100vh - 4em);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f24dc6+0,207ce5+100 */
+    background: #e000fe; /* Old browsers */
+    background: -moz-linear-gradient(left, #e000fe 0%, #207ce5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #e000fe 0%,#207ce5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to left, #e000fe 0%,#207ce5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f24dc6', endColorstr='#207ce5',GradientType=1 ); /* IE6-9 */
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* menu */
+
+aside {
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto 2em;
+    padding: 2em;
+}
+
+img {
+    width: 2.3em;
+    cursor: pointer;
+}
+
+/* name */
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+/* menu */
+
+nav {
+    background: #fff;
+}
+
+ul {
+    display: none;
+}
+
+ul.active {
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    top: 0;
+}
+
+ul {
+    margin-top: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul li a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    display: block;
+    padding: 1.5em 3em;
+    background-color: rgba(255, 255, 255, .35);
+}
+
+ul li a:hover {
+    background-color: rgba(232, 232, 232, 0.35);
+}
+
+/* main */
+
+main {
+    padding: 2em;
+    background-color: #fff;
+}
+
+h1 {
+    margin: 3em 0 0;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+p {
+    margin: 1em 0 0;
+    font-size: 1.05em;
+    line-height: 1.4em;
+}
+
+#action {
+    color: white;
+    background-color: dodgerblue;
+    padding: 1.2em 3.6em;
+    border-radius: .3em;
+    border-color: black;
+    border-width: 0;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-decoration: none;
+    display: block;
+    margin: 4em auto 1.5em;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 20% auto;
+        padding: 2em;
+    }
+
+    img {
+        display: none;
+    }
+
+    aside {
+        grid-template-columns: auto;
+        grid-template-rows: 20% auto;
+        padding: 0;
+    }
+
+    #avatar {
+        border-radius: 50%;
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        margin: 3em auto 1em;
+    }
+
+    /*#avatar {
+        border-radius: 50%;
+        background: #fff;
+        width: 3em;
+        height: 3em;
+        margin: 3em auto 1em;
+    }*/
+
+    figure {
+        background: rgba(253, 253, 253, 0.75);
+    }
+
+    figcaption {
+        text-align: center;
+        color: black;
+        font-weight: bold;
+    }
+
+    ul {
+        display: block;
+        margin-top: 4em;
+        position: relative !important;
+        background: none;
+        width: 100% !important;
+        height: 100%;
+    }
+
+    ul.active {
+        height: auto;
+    }
+
+    main {
+        background: white url("../../public/images/bg.svg") no-repeat right bottom;
+    }
+
+    h1 {
+        margin-top: 7em;
+    }
+
+    #action {
+        margin: 4em auto;
+    }
+}
+
+@media only screen and (min-height: 748px) {
+
+    h1 {
+        font-size: 3em;
+    }
+
+    #action {
+        max-width: 250px;
+        margin: 6em auto 6em 0 !important;
+    }
+}
+
+@media only screen and (min-height: 748px) {
+
+    h1 {
+        margin: 3em 0 0;
+    }
+
+    p {
+        margin: 2em 0 2em;
+        line-height: 2em;
+    }
+
+    #action {
+        margin: 6em auto 4em;
+    }
+}
+
+@media only screen and (min-height: 672px) {
+
+    h1 {
+        margin-top: 4em;
+    }
+
+    p {
+        margin: 2em 0 2em;
+    }
+
+    #action {
+        margin: 4em auto 3em;
+    }
+}
