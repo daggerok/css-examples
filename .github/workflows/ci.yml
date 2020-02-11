@@ -1,6 +1,38 @@
 name: CI
 on: [push]
 jobs:
+  css-gradient:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        nodejs-version: [12]
+        python-version: [3.8]
+    runs-on: ${{ matrix.os }}
+    name: css-gradient ${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }}
+    steps:
+      - name: Set up NodeJS ${{ matrix.nodejs-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.nodejs-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install / upgrade pip
+        run: python -m pip install --upgrade pip setuptools
+      - name: Install HTTPie
+        run: pip install --upgrade httpie
+      - name: Install required npm packages globally
+        run: npm install -g wait-port
+      - name: Clone git project
+        uses: actions/checkout@v2
+      - name: Install, run, wait and test
+        shell: bash
+        run: |
+          cd $GITHUB_WORKSPACE/css-gradient && npm i
+          cd $GITHUB_WORKSPACE/css-gradient && npm run dev &
+          wait-port 1234
+          http get :1234
   css-correct-way-to-inline-blocks-with-flex:
     strategy:
       matrix:
@@ -8,7 +40,7 @@ jobs:
         nodejs-version: [12]
         python-version: [3.8]
     runs-on: ${{ matrix.os }}
-    name: ${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }}
+    name: css-correct-way-to-inline-blocks-with-flex ${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }}
     steps:
       - name: Set up NodeJS ${{ matrix.nodejs-version }}
         uses: actions/setup-node@v1
@@ -45,7 +77,7 @@ jobs:
         nodejs-version: [12]
         python-version: [3.8]
     runs-on: ${{ matrix.os }}
-    name: ${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }}
+    name: css-boxing-model-and-layout-basics ${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }}
     steps:
       - name: Set up NodeJS ${{ matrix.nodejs-version }}
         uses: actions/setup-node@v1
