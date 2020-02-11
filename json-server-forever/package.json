@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "forever": "1.0.0",
+    "forever": "2.0.0",
     "json-server": "0.15.1"
   }
 }
