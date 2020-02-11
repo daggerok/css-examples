@@ -29,42 +29,42 @@ before_install:
   - stop_any 80 3000 5000 8080 5432
 jobs:
   include:
-    - stage: test
-      name: css-gradient
-      env:
-        - MY_PROJECT_NAME=css-gradient
-      before_script:
-        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
-        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
-        - wait_for 1234
-      script:
-        - http :1234
-        - http :1234/
-      after_script: cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm stop
-    - stage: test
-      name: css-correct-way-to-inline-blocks-with-flex
-      env:
-        - MY_PROJECT_NAME=css-correct-way-to-inline-blocks-with-flex
-      before_script:
-        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
-        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
-        - wait_for 1234
-      script:
-        - http :1234
-        - http :1234/
-      after_script: cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm stop
-    - stage: test
-      name: css-boxing-model-and-layout-basics
-      env:
-        - MY_PROJECT_NAME=css-boxing-model-and-layout-basics
-      before_script:
-        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
-        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
-        - wait_for 1234
-      script:
-        - http :1234
-        - http :1234/
-      after_script: cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm stop
+#    - stage: test
+#      name: css-gradient
+#      env:
+#        - MY_PROJECT_NAME=css-gradient
+#      before_script:
+#        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
+#        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
+#        - wait_for 1234
+#      script:
+#        - http :1234
+#        - http :1234/
+#      after_script: cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm stop
+#    - stage: test
+#      name: css-correct-way-to-inline-blocks-with-flex
+#      env:
+#        - MY_PROJECT_NAME=css-correct-way-to-inline-blocks-with-flex
+#      before_script:
+#        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
+#        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
+#        - wait_for 1234
+#      script:
+#        - http :1234
+#        - http :1234/
+#      after_script: cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm stop
+#    - stage: test
+#      name: css-boxing-model-and-layout-basics
+#      env:
+#        - MY_PROJECT_NAME=css-boxing-model-and-layout-basics
+#      before_script:
+#        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm i
+#        - cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm start
+#        - wait_for 1234
+#      script:
+#        - http :1234
+#        - http :1234/
+#      after_script: cd $TRAVIS_BUILD_DIR/$MY_PROJECT_NAME && npm stop
     - stage: test
       name: frontender
       env:
@@ -107,18 +107,18 @@ jobs:
         - cd $TRAVIS_BUILD_DIR/random-tachyons-button-styling
         - npm i
         - npm run predeploy
-    #- stage: test
-    #  name: parcel-starter
-    #  script:
-    #    - cd $TRAVIS_BUILD_DIR/parcel-starter
-    #    - npm i
-    #    - npm run predeploy
-    #- stage: test
-    #  name: simple-starter
-    #  script:
-    #    - cd $TRAVIS_BUILD_DIR/simple-starter
-    #    - npm i
-    #    - npm run predeploy
+    - stage: test
+      name: parcel-starter
+      script:
+        - cd $TRAVIS_BUILD_DIR/parcel-starter
+        - npm i
+        - npm run predeploy
+    - stage: test
+      name: simple-starter
+      script:
+        - cd $TRAVIS_BUILD_DIR/simple-starter
+        - npm i
+        - npm run predeploy
     - stage: deploy
       name: GitHub pages deploy
       script: skip
