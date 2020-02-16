@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAEA,KACE","file":"main.28a6ec0e.css","sourceRoot":"../src","sourcesContent":["//@import '../node_modules/sal.js/dist/sal.css';\n\nbody {\n  font-family: 'Roboto', sans-serif;\n}\n"]}
