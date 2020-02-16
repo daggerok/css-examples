@@ -1,7 +1,7 @@
 {
   "name": "scss-bootstrap4-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Bootstrap 4 + Free Font Awesome + Parcel Bundler setup",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html --no-cache",
@@ -21,9 +21,13 @@
   "keywords": [
     "ncp",
     "pm2",
+    "scss",
     "rimraf",
     "parcel",
+    "jquery",
     "gh-pages",
+    "bootstrap",
+    "bootstrap4",
     "webfontloader"
   ],
   "author": "Maksim Kostromin <daggerok@gmail.com> (https://github.com/daggerok)",
