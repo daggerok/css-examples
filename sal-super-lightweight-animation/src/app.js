@@ -7,3 +7,8 @@ WebFont.load({
     ],
   },
 });
+
+import 'sal.js/dist/sal.css';
+import sal from 'sal.js';
+
+sal();
