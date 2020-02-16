@@ -1,6 +1,40 @@
 name: CI
 on: [push]
 jobs:
+  scss-bootstrap4-starter:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        nodejs-version: [12]
+        python-version: [3.8]
+    runs-on: ${{ matrix.os }}
+    name: scss-bootstrap4-starter (${{ matrix.os }} OS, python ${{ matrix.python-version }}, NodeJS ${{ matrix.nodejs-version }})
+    steps:
+      - name: Set up NodeJS ${{ matrix.nodejs-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.nodejs-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install / upgrade pip
+        run: python -m pip install --upgrade pip setuptools
+      - name: Install HTTPie
+        run: pip install --upgrade httpie
+      - name: Install required npm packages globally
+        run: npm install -g wait-port
+      - name: Clone git project
+        uses: actions/checkout@v2
+      - name: Install, run, wait and test
+        shell: bash
+        run: |
+          cd $GITHUB_WORKSPACE/scss-bootstrap4-starter && npm i
+          cd $GITHUB_WORKSPACE/scss-bootstrap4-starter && npm start
+          cd $GITHUB_WORKSPACE/scss-bootstrap4-starter && npm run logs &
+          wait-port 1234
+          http get :1234
+          cd $GITHUB_WORKSPACE/scss-bootstrap4-starter && npm stop
   css-gradient-based-app-step-2:
     strategy:
       matrix:

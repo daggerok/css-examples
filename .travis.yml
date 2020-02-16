@@ -135,31 +135,36 @@ jobs:
           branch: master
       #  local-dir: $TRAVIS_BUILD_DIR/target/generated-docs
       #before_deploy: cd $TRAVIS_BUILD_DIR && ./mvnw
-      #
+      ##
       #  local-dir: $TRAVIS_BUILD_DIR/frontender/dist
       #before_deploy:
       #  - cd $TRAVIS_BUILD_DIR/frontender && npm i
       #  - cd $TRAVIS_BUILD_DIR/frontender && npm run predeploy
-      #
+      ##
       #  local-dir: $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics/dist
       #before_deploy:
       #  - cd $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics && npm i
       #  - cd $TRAVIS_BUILD_DIR/css-boxing-model-and-layout-basics && npm run gh
-      #
+      ##
       #  local-dir: $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex/dist
       #before_deploy:
       #  - cd $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex && npm i
       #  - cd $TRAVIS_BUILD_DIR/css-correct-way-to-inline-blocks-with-flex && npm run gh
-      #
+      ##
       #  local-dir: $TRAVIS_BUILD_DIR/css-gradient-based-app-step-1/dist
       #before_deploy:
       #  - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-1 && npm i
       #  - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-1 && npm run gh
+      ##
+      #  local-dir: $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2/dist
+      #before_deploy:
+      #  - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2 && npm i
+      #  - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2 && npm run gh
       #
-        local-dir: $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2/dist
+        local-dir: $TRAVIS_BUILD_DIR/scss-bootstrap4-starter/dist
       before_deploy:
-        - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2 && npm i
-        - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2 && npm run gh
+        - cd $TRAVIS_BUILD_DIR/scss-bootstrap4-starter && npm i
+        - cd $TRAVIS_BUILD_DIR/scss-bootstrap4-starter && npm run gh
 cache:
   directories:
   - ~/.m2
