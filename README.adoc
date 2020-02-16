@@ -6,7 +6,8 @@ image::ui-principles.png[]
 
 reference:
 
-- link:https://www.youtube.com/watch?v=6zGTxITQkN0&t=0s[YouTube: Super Lightweight Scroll Animations with Sal.js - 2.8kb!]
+- link:https://www.youtube.com/watch?v=GZTZTZ69bqY[YouTube: CSS Variables]
+- link:https://www.youtube.com/watch?v=6zGTxITQkN0[YouTube: Super Lightweight Scroll Animations with Sal.js - 2.8kb!]
 - link:https://en.parceljs.org/recipes.html#bootstrap-+-fontawesome[Parcel Bundler + Bootstrap 4 + Font Awesome]
 - link:https://github.com/parcel-bundler/parcel/issues/1080#issuecomment-584745016[Parcel Bundler copy static resources assets files]
 - link:https://daggerok.github.io/css-examples[Project reference documentation]

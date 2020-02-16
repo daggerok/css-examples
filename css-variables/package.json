@@ -1,0 +1,62 @@
+{
+  "name": "css-variables",
+  "version": "1.0.0",
+  "description": "CSS variables",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html --no-cache",
+    "prebuild": "rimraf dist",
+    "build": "parcel build src/index.html --no-cache",
+    "preserve": "npm run build",
+    "serve": "browser-sync start --no-notify --single -s ./dist/",
+    "start": "pm2 start 'npm run dev' --name app",
+    "restart": "pm2 restart app",
+    "stop": "pm2 kill",
+    "logs": "pm2 logs",
+    "gh": "npm run build -- --public-url /css-examples/",
+    "postgh": "ncp ./static ./dist --filter '**/*.*'",
+    "predeploy": "npm run gh",
+    "deploy": "gh-pages -e ./ -d ./dist -s '{*.*,.*,*,**}' --branch gh-pages --dotfiles=true -m \"Github Pages $(date +%Y-%m-%d) deployment\""
+  },
+  "keywords": [
+    "ncp",
+    "pm2",
+    "scss",
+    "rimraf",
+    "parcel",
+    "gh-pages",
+    "css-variables",
+    "webfontloader"
+  ],
+  "author": "Maksim Kostromin <daggerok@gmail.com> (https://github.com/daggerok)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "13.7.1",
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.7.0",
+    "gh-pages": "2.2.0",
+    "ncp": "2.0.0",
+    "parcel-bundler": "1.12.4",
+    "pm2": "4.2.3",
+    "rimraf": "3.0.2",
+    "sass": "1.25.0",
+    "webfontloader": "1.6.28"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "safari >= 7",
+              "chrome >= 36",
+              "firefox >= 28"
+            ]
+          }
+        }
+      ]
+    ]
+  }
+}

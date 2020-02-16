@@ -1,0 +1,24 @@
+:root {
+  --site-bg: #e9e9e9
+}
+
+.container {
+  --type-weight: bold;
+  --type-color: #32b0fd;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--site-bg);
+}
+
+.container, .wrapper {
+  font-weight: var(--type-weight); /* but only p in .container will be bold! because variable scope! */
+  color: var(--type-color, #216b9d); /* while here both will have same color, because we passed default value */
+}
