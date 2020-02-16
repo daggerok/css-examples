@@ -156,15 +156,20 @@ jobs:
       #  - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-1 && npm i
       #  - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-1 && npm run gh
       ##
-        local-dir: $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2/dist
-      before_deploy:
-        - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2 && npm i
-        - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2 && npm run gh
+#        local-dir: $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2/dist
+#      before_deploy:
+#        - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2 && npm i
+#        - cd $TRAVIS_BUILD_DIR/css-gradient-based-app-step-2 && npm run gh
       ##
       #  local-dir: $TRAVIS_BUILD_DIR/scss-bootstrap4-starter/dist
       #before_deploy:
       #  - cd $TRAVIS_BUILD_DIR/scss-bootstrap4-starter && npm i
       #  - cd $TRAVIS_BUILD_DIR/scss-bootstrap4-starter && npm run gh
+      ##
+        local-dir: $TRAVIS_BUILD_DIR/sal-super-lightweight-animation/dist
+      before_deploy:
+        - cd $TRAVIS_BUILD_DIR/sal-super-lightweight-animation && npm i
+        - cd $TRAVIS_BUILD_DIR/sal-super-lightweight-animation && npm run gh
 cache:
   directories:
   - ~/.m2
