@@ -1,0 +1,19 @@
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+
+  /* 1 but no dry code */
+  //grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* 2 but not responsive */
+  //grid-template-columns: repeat(12, 1fr);
+  /* 3 but overflows... */
+  //grid-template-columns: repeat(12, minmax(16em, 1fr));
+  /* 4 auto-fit! */
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+}
+
+.auto-fill-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+}
