@@ -11,9 +11,10 @@ WebFont.load({
 const light: HTMLLinkElement = document.querySelector('#light');
 const dark: HTMLLinkElement = document.querySelector('#dark');
 
-const theme = localStorage.getItem('theme');
+const theme:string = localStorage.getItem('theme');
 const body: HTMLElement = document.body;
-body.classList.add(theme ? theme : 'dark');
+const defaultTheme: string = 'dark';
+body.classList.add(theme ? theme : defaultTheme);
 
 dark.onclick = e => {
   body.classList.remove('light');
