@@ -10,7 +10,6 @@ WebFont.load({
 
 const light: HTMLLinkElement = document.querySelector('#light');
 const dark: HTMLLinkElement = document.querySelector('#dark');
-
 const body: HTMLElement = document.body;
 
 const usedDarkTheme = _ => {
@@ -24,10 +23,10 @@ const useLightTheme = _ => {
   localStorage.setItem('theme', 'light');
 };
 
+dark.onclick = usedDarkTheme;
+light.onclick = useLightTheme;
+
 const theme: string = localStorage.getItem('theme');
 
 if (!theme && !body.classList.contains(theme))
   body.classList.add(theme);
-
-dark.onclick = usedDarkTheme;
-light.onclick = useLightTheme;
