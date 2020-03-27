@@ -15,7 +15,7 @@ const theme:string = localStorage.getItem('theme');
 const body: HTMLElement = document.body;
 const defaultTheme: string = 'dark';
 
-body.classList.add(theme ? theme : defaultTheme);
+body.classList.add(!theme ? defaultTheme : theme);
 
 dark.onclick = e => {
   body.classList.remove('light');
