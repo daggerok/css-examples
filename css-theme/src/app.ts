@@ -11,7 +11,7 @@ WebFont.load({
 const light: HTMLLinkElement = document.querySelector('#light');
 const dark: HTMLLinkElement = document.querySelector('#dark');
 
-const theme:string = localStorage.getItem('theme');
+const theme: string = localStorage.getItem('theme');
 const body: HTMLElement = document.body;
 const defaultTheme: string = 'dark';
 
