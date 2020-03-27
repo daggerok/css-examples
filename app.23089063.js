@@ -4,4 +4,4 @@ var t;!function(){function n(t,n,i){return t.call.apply(t.bind,arguments)}functi
 },{}],"EVxB":[function(require,module,exports) {
 "use strict";var e=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)Object.hasOwnProperty.call(e,r)&&(t[r]=e[r]);return t.default=e,t};Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("webfontloader"));t.load({google:{families:["Roboto"]}});var r=document.querySelector("#light"),o=document.querySelector("#dark"),a=localStorage.getItem("theme"),l=document.body,c="dark";l.classList.add(a||c),o.onclick=function(e){l.classList.remove("light"),l.classList.add("dark"),localStorage.setItem("theme","dark")},r.onclick=function(e){l.classList.replace("dark","light"),localStorage.setItem("theme","light")};
 },{"webfontloader":"FryP"}]},{},["EVxB"], null)
-//# sourceMappingURL=/css-examples/app.36d9e3d4.js.map
+//# sourceMappingURL=/css-examples/app.23089063.js.map
