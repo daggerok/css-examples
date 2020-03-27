@@ -154,3 +154,24 @@ main {
   --logo-title: var(--dark-logo-title);
   --logo-text: var(--dark-logo-text);
 }
+
+// logo animation
+
+@keyframes color-rotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+header {
+  img {
+    &:hover {
+      animation: color-rotate 10s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+}
