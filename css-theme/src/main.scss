@@ -58,7 +58,7 @@ header {
 .dropdown {
   position: absolute;
   width: 30rem;
-  //opacity: 0;
+  opacity: 0;
   z-index: 2;
   background: blue;
   border-top: 2px solid burlywood;
@@ -75,4 +75,11 @@ header {
 
   box-shadow: rgba(2, 8, 20, 0.1) 0.175em .5em;
   transform: translateX(-43%);
+  transition: opacity 150ms ease-out;
 }
+
+.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
