@@ -14,6 +14,7 @@ const dark: HTMLLinkElement = document.querySelector('#dark');
 const theme:string = localStorage.getItem('theme');
 const body: HTMLElement = document.body;
 const defaultTheme: string = 'dark';
+
 body.classList.add(theme ? theme : defaultTheme);
 
 dark.onclick = e => {
