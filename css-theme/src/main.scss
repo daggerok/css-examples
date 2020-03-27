@@ -78,8 +78,30 @@ header {
   transition: opacity 150ms ease-out;
 }
 
-.has-dropdown:focus-within .dropdown {
-  opacity: 1;
-  pointer-events: auto;
+.has-dropdown:focus-within {
+  .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
+.dropdown-item {
+  a {
+    width: 100%;
+    height: 100%;
+    size: 0.7rem;
+    font-weight: bold;
+    padding-left: 1em;
+
+    &::before {
+      content: ' ';
+      border: 2px solid wheat;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1em;
+    }
+  }
+}
