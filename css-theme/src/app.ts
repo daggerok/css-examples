@@ -11,19 +11,23 @@ WebFont.load({
 const light: HTMLLinkElement = document.querySelector('#light');
 const dark: HTMLLinkElement = document.querySelector('#dark');
 
-const theme: string = localStorage.getItem('theme');
 const body: HTMLElement = document.body;
-const defaultTheme: string = 'dark';
 
-body.classList.add(!theme ? defaultTheme : theme);
-
-dark.onclick = e => {
+const usedDarkTheme = _ => {
   body.classList.remove('light');
   body.classList.add('dark');
   localStorage.setItem('theme', 'dark');
 };
 
-light.onclick = e => {
+const useLightTheme = _ => {
   body.classList.replace('dark', 'light');
   localStorage.setItem('theme', 'light');
 };
+
+const theme: string = localStorage.getItem('theme');
+
+if (!theme && !body.classList.contains(theme))
+  body.classList.add(theme);
+
+dark.onclick = usedDarkTheme;
+light.onclick = useLightTheme;
